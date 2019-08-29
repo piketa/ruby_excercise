@@ -16,7 +16,7 @@ begin
     distance = target > position ? target - position : position - target
 
     if (distance == 0)
-      print "おめでとう！", turn, "回目で正解です！\n"
+      print "おめでとう！ #{turn}回目で正解です！\n"
       break
     elsif (distance <= range)
       print "ヒットしました。\n\n"
