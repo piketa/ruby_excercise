@@ -1,29 +1,19 @@
-=begin
-もっと綺麗が書き方があるはず
-=end
-
-i = 1
+print "数字を入力してください："
+num_row = gets.to_i
+num_col = num_row
 str = ""
 
-print "数字を入力してください："
-numRow = gets.to_i
-numCol = numRow
-
-if numRow < 0
+if num_row < 0
   puts "マイナスの数字が入力されました。"
 else
-  numRow.times do
-    while i <= numCol do
-      if (i % 2 == 0)
-        str << '▼'
-      else
-        str << '▲'
+  num_row.times do
+    (1..num_col).each do |i|
+      if (i % 2 == 0) then str << '▼'
+      else str << '▲'
       end
-      i += 1
     end
     puts str
-    numCol -= 1
-    i = 1
+    num_col -= 1
     str = ""
   end
 end
